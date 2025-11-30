@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jagrati Verma | Earth Science Researcher</title>
+    <meta name="description" content="M.Sc. Environmental Science student specializing in Remote Sensing, Climate Adaptation, and Earth Observation.">
+    
+    <!-- Google Fonts: Roboto for body, Merriweather for headers -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            /* Earth Science Color Palette */
+            --primary-color: #2C5F2D; /* Deep Forest Green */
+            --secondary-color: #97BC62; /* Moss Green */
+            --accent-color: #005F73; /* Ocean Blue */
+            --text-dark: #2c3e50;
+            --text-light: #5a6b7c;
+            --bg-light: #f9fbfd;
+            --white: #ffffff;
+            --border: #e1e4e8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: var(--bg-light);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Merriweather', serif;
+            color: var(--text-dark);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--accent-color);
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- NAVIGATION --- */
+        nav {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* --- HERO SECTION (Updated with Background Image) --- */
+        .hero {
+            /* INSTRUCTION: Replace the URL below with your own background image if you want.
+               The linear-gradient adds a dark overlay so your text pops.
+            */
+            background: linear-gradient(rgba(20, 40, 20, 0.75), rgba(0, 60, 80, 0.75)), url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax effect */
+            padding: 5rem 5%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 70vh; /* Made slightly taller for drama */
+            color: var(--white);
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-name {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--white); /* White text for contrast */
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #e0e0e0; /* Light grey for subtitle */
+            margin-bottom: 2rem;
+            text-shadow: 0 1px 5px rgba(0,0,0,0.3);
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.15); /* Glassmorphism button */
+            backdrop-filter: blur(5px);
+            color: var(--white);
+            border: 1px solid rgba(255,255,255,0.5);
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .hero-btn:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        .social-icons {
+            margin-top: 2rem;
+        }
+
+        .social-icons a {
+            font-size: 1.5rem;
+            margin: 0 12px;
+            color: rgba(255, 255, 255, 0.8);
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: var(--white);
+            transform: scale(1.1);
+        }
+
+        /* --- SECTION STYLES --- */
+        section {
+            padding: 4rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            border-bottom: 2px solid var(--secondary-color);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        /* --- ABOUT SECTION --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .profile-img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background-color: #ddd; 
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+
+        .about-text p {
+            margin-bottom: 1rem;
+        }
+
+        .keywords {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .keyword-tag {
+            background-color: rgba(151, 188, 98, 0.2);
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* --- RESEARCH SECTION --- */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .research-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            background-color: #e9ecef;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card-content h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-content p {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* --- PUBLICATIONS/ACHIEVEMENTS SECTION --- */
+        .publication-item {
+            margin-bottom: 2rem;
+            padding-left: 1rem;
+            border-left: 3px solid var(--secondary-color);
+        }
+
+        .pub-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .pub-authors {
+            font-size: 0.95rem;
+            margin: 0.2rem 0;
+        }
+
+        .highlight-me {
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .pub-venue {
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* --- SKILLS & TOOLS --- */
+        .skills-container {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .skill-category {
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-category h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--accent-color);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--text-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-name {
+                font-size: 2.5rem;
+            }
+
+            .nav-links {
+                display: none; 
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-brand">Jagrati Verma</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#awards">Achievements</a>
+            <a href="#cv">CV</a>
+        </div>
+    </nav>
+
+    <!-- Hero Header -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-name">Jagrati Verma</h1>
+            <!-- UPDATED TITLE (Broader Scope) -->
+            <p class="hero-subtitle">Researcher in Earth Observation & Environmental Science</p>
+            
+            <!-- UPDATED SUBTITLE (Professional, removed "Gold Medalist Potential") -->
+            <p style="margin-bottom: 1.5rem; font-style: italic; color: #ddd;">M.Sc. Environmental Science (CGPA: 9.43/10) | UGC NET Qualified</p>
+            
+            <a href="Jagrati_VermaCV.pdf" class="hero-btn" target="_blank"><i class="fas fa-file-pdf"></i> Download CV</a>
+            
+            <div class="social-icons">
+                <a href="mailto:2024mses013@curaj.ac.in" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com/in/jagrativerma" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/jagrativerma31" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <!-- UPDATED: Added Instagram Link -->
+                <a href="https://www.instagram.com/jeevan__dhara/?igsh=MXc5c3lnaDc4Y3BydA%3D%3D#" target="_blank" title="Nature Photography"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+            <div class="about-image">
+                <!-- INSTRUCTION: Replace the link below with your photo filename (e.g., src="my_photo.jpg") -->
+                <img src="profile.jpg" alt="Jagrati Verma" class="profile-img">
+            </div>
+            <div class="about-text">
+                <p>
+                    I am a Master's student in Environmental Science at the <strong>Central University of Rajasthan</strong>, with a strong focus on using <strong>Satellite Remote Sensing (SAR & Optical)</strong> to understand environmental and cryospheric changes. 
+                </p>
+                <p>
+                    My research journey has taken me from the labs of <strong>IIT Bombay</strong>, where I studied CO<sub>2</sub> sequestration, to the <strong>Space Applications Centre (ISRO)</strong>, where I characterized Himalayan glacier dynamics using high-resolution radar data.
+                </p>
+                <p>
+                    With a UGC NET qualification (AIR 211) and a background in both field investigations and machine learning (Random Forest, TensorFlow), I am seeking PhD opportunities to further explore the intersection of <strong>climate change, geospatial analysis, and earth system science</strong>.
+                </p>
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 1rem; font-style: italic;">
+                    <i class="fas fa-camera"></i> Outside the lab, I am an avid <a href="https://www.instagram.com/jeevan__dhara/?igsh=MXc5c3lnaDc4Y3BydA%3D%3D#" target="_blank" style="color: var(--primary-color);">nature photographer</a>, capturing the landscapes I study.
+                </p>
+                
+                <div class="skills-container" style="margin-top: 2rem;">
+                    <div class="skill-category">
+                        <h4>Technical Skills</h4>
+                        <p><strong>GIS & RS:</strong> ArcGIS Pro, QGIS, ERDAS Imagine, ENVI, SNAP (Sentinel Application Platform)</p>
+                        <p><strong>Programming:</strong> Python (Geospatial libs), R, Machine Learning (TensorFlow)</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Core Competencies</h4>
+                        <p>Glaciology, GLOF Prediction, CO<sub>2</sub> Sequestration, Statistical Modeling, Environmental Impact Assessment (EIA)</p>
+                    </div>
+                </div>
+
+                <div class="keywords">
+                    <span class="keyword-tag">Glacier Dynamics</span>
+                    <span class="keyword-tag">SAR Remote Sensing</span>
+                    <span class="keyword-tag">Climate Modelling</span>
+                    <span class="keyword-tag">Machine Learning</span>
+                    <span class="keyword-tag">Basalt Weathering</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Projects -->
+    <section id="research">
+        <h2 class="section-title">Research Experience</h2>
+        <div class="research-grid">
+            
+            <!-- Project Card 1: ISRO -->
+            <div class="research-card">
+                <img src="https://via.placeholder.com/600x400?text=Himalayan+Glaciers+(SAR)" alt="ISRO Glacier Research" class="card-img">
+                <div class="card-content">
+                    <h3>Himalayan Glacier Characterization (ISRO)</h3>
+                    <p style="font-size: 0.85rem; color: var(--primary-color); margin-bottom: 0.5rem;"><strong>Space Applications Centre, ISRO | 2025</strong></p>
+                    <p>Analyzed seasonal glacier dynamics using <strong>RISAT-1A SAR</strong> backscatter and LISS-III/IV optical data. Developed a <strong>Random Forest model</strong> to classify snow-ice facies and optimized SAR preprocessing using Frost filters to preserve edges. Linked facies changes to ERA5 temperature trends.</p>
+                </div>
+            </div>
+
+            <!-- Project Card 2: IIT Bombay -->
+            <div class="research-card">
+                <img src="https://via.placeholder.com/600x400?text=Basalt+CO2+Sequestration" alt="IIT Bombay Internship" class="card-img">
+                <div class="card-content">
+                    <h3>CO<sub>2</sub> Sequestration using Basalt</h3>
+                    <p style="font-size: 0.85rem; color: var(--primary-color); margin-bottom: 0.5rem;"><strong>IIT Bombay | 2022</strong></p>
+                    <p>Investigated enhanced rock weathering for carbon capture. Prepared basalt samples under controlled pH and incubated with CO<sub>2</sub>. Used <strong>X-Ray Diffraction (XRD)</strong> to identify calcium and magnesium carbonate mineral formation, validating sequestration potential.</p>
+                </div>
+            </div>
+
+            <!-- Project Card 3: Sikkim Project -->
+            <div class="research-card">
+                <img src="https://via.placeholder.com/600x400?text=GLOF+Prediction+Sikkim" alt="Sikkim GLOF Project" class="card-img">
+                <div class="card-content">
+                    <h3>Glacier & Lake Dynamics in Sikkim</h3>
+                    <p style="font-size: 0.85rem; color: var(--primary-color); margin-bottom: 0.5rem;"><strong>M.Sc. Minor Project | 2025</strong></p>
+                    <p>Assessed the retreat of the <strong>Zemu Glacier</strong> (2013-2023) using Landsat NDSI. Analyzed terrain (Slope, Aspect) and long-term ERA5 climate data to evaluate susceptibility to <strong>Glacial Lake Outburst Floods (GLOFs)</strong>.</p>
+                </div>
+            </div>
+
+             <!-- Project Card 4: Beas Basin -->
+             <div class="research-card">
+                <img src="https://via.placeholder.com/600x400?text=LULC+Beas+Basin" alt="Beas Basin Project" class="card-img">
+                <div class="card-content">
+                    <h3>Climate Variability in Beas Basin</h3>
+                    <p style="font-size: 0.85rem; color: var(--primary-color); margin-bottom: 0.5rem;"><strong>B.Sc. Final Project | 2024</strong></p>
+                    <p>Quantified Land Use/Land Cover (LULC) changes using <strong>Sentinel-2 imagery</strong>. Performed regression trend analysis on ERA5 temperature/precipitation data, finding a correlation of r=-0.55 between LULC changes and climatic variability.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Awards & Talks -->
+    <section id="awards">
+        <h2 class="section-title">Achievements</h2>
+        
+        <!-- Award 1 -->
+        <div class="publication-item">
+            <div class="pub-title">National Environmental Youth Parliament (NEYP) 2025</div>
+            <div class="pub-venue">Represented Rajasthan State at Vidhan Sabha, Jaipur (Top 0.3% of students in India)</div>
+        </div>
+
+        <!-- Award 2 -->
+        <div class="publication-item">
+            <div class="pub-title">2nd Place - Women in Data Science (WiDS) Datathon</div>
+            <div class="pub-venue">Central University of Rajasthan, 2023</div>
+            <div class="pub-authors">Topic: "Adapting to Climate Change by Improving Extreme Weather Forecasts"</div>
+        </div>
+
+        <!-- Award 3 -->
+        <div class="publication-item">
+            <div class="pub-title">Winner - Science Day Idea Presentation</div>
+            <div class="pub-venue">Central University of Rajasthan, 2023</div>
+            <div class="pub-authors">Proposed a "Climate Change Modelling framework for South Asia"</div>
+        </div>
+
+        <!-- Exam -->
+        <div class="publication-item">
+            <div class="pub-title">UGC NET (Environmental Science) Qualified</div>
+            <div class="pub-venue">Percentile: 97.9 | All India Rank: 211</div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Jagrati Verma. Built with HTML/CSS.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">
+            <a href="mailto:2024mses013@curaj.ac.in" style="color: #bbb;">Contact Me</a>
+        </p>
+    </footer>
+
+</body>
+</html>
