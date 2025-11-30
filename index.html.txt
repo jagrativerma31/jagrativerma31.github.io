@@ -358,7 +358,7 @@
             <!-- UPDATED SUBTITLE (Professional, removed "Gold Medalist Potential") -->
             <p style="margin-bottom: 1.5rem; font-style: italic; color: #ddd;">M.Sc. Environmental Science (CGPA: 9.43/10) | UGC NET Qualified</p>
             
-            <a href="Jagrati_VermaCV.pdf" class="hero-btn" target="_blank"><i class="fas fa-file-pdf"></i> Download CV</a>
+            <a href="Jagrati_Verma_CV.pdf" class="hero-btn" target="_blank"><i class="fas fa-file-pdf"></i> Download CV</a>
             
             <div class="social-icons">
                 <a href="mailto:2024mses013@curaj.ac.in" title="Email"><i class="fas fa-envelope"></i></a>
@@ -506,3 +506,4 @@
 </body>
 
 </html>
+
