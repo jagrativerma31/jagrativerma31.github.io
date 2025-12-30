@@ -25,7 +25,11 @@
             --border: #e1e4e8;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         body {
             font-family: 'Roboto', sans-serif;
@@ -34,9 +38,20 @@
             background-color: var(--bg-light);
         }
 
-        h1, h2, h3, h4 { font-family: 'Merriweather', serif; color: var(--text-dark); }
-        a { text-decoration: none; color: var(--accent-color); transition: color 0.3s ease; }
-        a:hover { color: var(--primary-color); }
+        h1, h2, h3, h4 {
+            font-family: 'Merriweather', serif;
+            color: var(--text-dark);
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--accent-color);
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
 
         /* --- NAVIGATION --- */
         nav {
@@ -51,9 +66,22 @@
             align-items: center;
         }
 
-        .nav-brand { font-weight: 700; font-size: 1.2rem; color: var(--primary-color); }
-        .nav-links { display: flex; gap: 2rem; }
-        .nav-links a { color: var(--text-dark); font-weight: 500; font-size: 0.95rem; }
+        .nav-brand {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
 
         /* --- HERO SECTION --- */
         .hero {
@@ -70,8 +98,19 @@
             color: var(--white);
         }
 
-        .hero-name { font-size: 3.5rem; margin-bottom: 0.5rem; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
-        .hero-subtitle { font-size: 1.5rem; font-weight: 300; color: #e0e0e0; margin-bottom: 2rem; }
+        .hero-name {
+            font-size: 3.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #e0e0e0;
+            margin-bottom: 2rem;
+        }
+
         .hero-btn {
             display: inline-block;
             background-color: rgba(255, 255, 255, 0.15);
@@ -84,27 +123,95 @@
             font-weight: 500;
             transition: all 0.3s ease;
         }
-        .hero-btn:hover { background-color: var(--white); color: var(--primary-color); }
 
-        .social-icons { margin-top: 2rem; }
-        .social-icons a { font-size: 1.5rem; margin: 0 12px; color: rgba(255, 255, 255, 0.8); transition: color 0.3s ease; }
-        .social-icons a:hover { color: var(--white); transform: scale(1.1); }
+        .hero-btn:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        .social-icons {
+            margin-top: 2rem;
+        }
+
+        .social-icons a {
+            font-size: 1.5rem;
+            margin: 0 12px;
+            color: rgba(255, 255, 255, 0.8);
+            transition: color 0.3s ease;
+        }
 
         /* --- SECTION STYLES --- */
-        section { padding: 4rem 5%; max-width: 1200px; margin: 0 auto; }
-        .section-title { font-size: 2rem; margin-bottom: 3rem; border-bottom: 2px solid var(--secondary-color); display: inline-block; padding-bottom: 0.5rem; }
+        section {
+            padding: 4rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-        .about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: start; }
-        .profile-img { width: 100%; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-color: #ddd; aspect-ratio: 1/1; object-fit: cover; }
-        .keyword-tag { background-color: rgba(151, 188, 98, 0.2); color: var(--primary-color); padding: 0.3rem 0.8rem; border-radius: 50px; font-size: 0.85rem; font-weight: 500; }
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            border-bottom: 2px solid var(--secondary-color);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
 
-        .research-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .research-card { background: var(--white); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; }
-        .research-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.08); }
-        .card-img { width: 100%; height: 200px; background-color: #e9ecef; object-fit: cover; }
-        .card-content { padding: 1.5rem; flex-grow: 1; }
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: start;
+        }
 
-        .publication-item { margin-bottom: 2rem; padding-left: 1rem; border-left: 3px solid var(--secondary-color); }
+        .profile-img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            aspect-ratio: 1/1;
+            object-fit: cover;
+        }
+
+        .keyword-tag {
+            background-color: rgba(151, 188, 98, 0.2);
+            color: var(--primary-color);
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* --- RESEARCH SECTION --- */
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .research-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .research-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            background-color: #e9ecef;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
 
         /* --- FOOTER --- */
         footer {
@@ -115,6 +222,12 @@
             margin-top: 4rem;
         }
 
+        footer p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Mobile Responsive */
         @media (max-width: 768px) {
             .about-grid { grid-template-columns: 1fr; }
             .hero-name { font-size: 2.5rem; }
@@ -139,7 +252,7 @@
             <h1 class="hero-name">Jagrati Verma</h1>
             <p class="hero-subtitle">Researcher in Earth Observation & Environmental Science</p>
             <p style="margin-bottom: 1.5rem; font-style: italic; color: #ddd;">M.Sc. Environmental Science (CGPA: 9.43/10) | UGC NET Qualified</p>
-            <a href="Jagrati_Verma_CV_final.pdf" class="hero-btn" target="_blank"><i class="fas fa-file-pdf"></i> Download CV</a>
+            <a href="Jagrati_Verma_CV.pdf" class="hero-btn" target="_blank"><i class="fas fa-file-pdf"></i> Download CV</a>
             <div class="social-icons">
                 <a href="mailto:2024mses013@curaj.ac.in" title="Email"><i class="fas fa-envelope"></i></a>
                 <a href="https://linkedin.com/in/jagrativerma" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
@@ -156,7 +269,7 @@
                 <img src="profile.jpg" alt="Jagrati Verma" class="profile-img">
             </div>
             <div class="about-text">
-                <p>I am a Master's student in Environmental Science at the <strong>Central University of Rajasthan</strong>, specializing in Satellite Remote Sensing (SAR & Optical).</p>
+                <p>I am a Master's student in Environmental Science at the Central University of Rajasthan, with a strong focus on using Satellite Remote Sensing to understand environmental changes.</p>
                 <div class="keywords">
                     <span class="keyword-tag">Glacier Dynamics</span>
                     <span class="keyword-tag">SAR Remote Sensing</span>
@@ -170,14 +283,14 @@
         <h2 class="section-title">Research Experience</h2>
         <div class="research-grid">
             <div class="research-card">
-                <img src="https://via.placeholder.com/600x400?text=Himalayan+Glaciers+(SAR)" class="card-img">
+                <img src="https://via.placeholder.com/600x400?text=ISRO+Research" class="card-img">
                 <div class="card-content">
                     <h3>Himalayan Glacier Characterization (ISRO)</h3>
                     <p>Space Applications Centre, ISRO | 2025</p>
                 </div>
             </div>
             <div class="research-card">
-                <img src="https://via.placeholder.com/600x400?text=Basalt+CO2+Sequestration" class="card-img">
+                <img src="https://via.placeholder.com/600x400?text=IIT+Bombay" class="card-img">
                 <div class="card-content">
                     <h3>CO2 Sequestration using Basalt</h3>
                     <p>IIT Bombay | 2022</p>
@@ -188,9 +301,9 @@
 
     <section id="awards">
         <h2 class="section-title">Achievements</h2>
-        <div class="publication-item">
-            <div class="pub-title">UGC NET (Environmental Science) Qualified</div>
-            <div class="pub-venue">AIR: 211</div>
+        <div class="publication-item" style="border-left: 3px solid var(--secondary-color); padding-left: 1rem; margin-bottom: 2rem;">
+            <div class="pub-title" style="font-weight:700;">UGC NET (Environmental Science) Qualified</div>
+            <div class="pub-venue" style="font-style:italic; color:var(--text-light);">Percentile: 97.9 | All India Rank: 211</div>
         </div>
     </section>
 
@@ -199,14 +312,13 @@
         <p style="font-size: 0.8rem; margin-top: 10px;">
             <a href="mailto:2024mses013@curaj.ac.in" style="color: #bbb;">Contact Me</a>
         </p>
-        
+
         <div style="margin-top: 25px; display: flex; justify-content: center;">
-            <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=1bk-LVzXeZqGJ6kYkX55xslRi5OPk-5IOq9OOIyrmqw&cl=ffffff&w=a"></script>
+            <div style="width: 300px;">
+                <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=1bk-LVzXeZqGJ6kYkX55xslRi5OPk-5IOq9OOIyrmqw&cl=ffffff&w=a"></script>
+            </div>
         </div>
     </footer>
 
 </body>
 </html>
-
-
-
